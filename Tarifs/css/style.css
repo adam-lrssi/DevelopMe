@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color: #191f36;
+    --snd-bf-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NavBar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: var(--bg-color);
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 300px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-links li {
+    list-style: none;
+    margin-right: 20px;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav-links li a:hover {
+    color: var(--main-color);
+}
+
+/* Tarifs */
+.tarifs {
+    background: var(--snd-bf-color);
+}
+
+.tarifs-container {
+    padding: 150px 50px;
+}
+
+.tarifs-container h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.tarifs-container span {
+    color: var(--main-color);
+}
+
+.tarifs-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarif, .tarif-pro, .tarif-mobile {
+    background: var(--bg-color);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 100px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarif {
+    max-height: 680px;
+}
+
+
+
+.tarif:hover {
+    transform: translateY(-10px);
+}
+
+.tarif h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.option {
+    margin-bottom: 30px;
+}
+
+.optiontext {
+    text-align: left;
+}
+
+.optiontext p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.optiontext span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.commander {
+    background: var(--main-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition:  0.3s ease;
+}
+
+.tarif-essentiel {
+    margin-top: 80px;
+}
+
+.commander:hover {
+    background: #3a8fc7;
+}
+
+.commander a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Tarifs Pro */
+
+.tarif-pro {
+    background: var(--bg-color);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 100px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--main-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.tarif-pro::before {
+    content: "Pro";
+    position: absolute;
+    top: -10px; /* Ajustement de la position verticale */
+    right: -30px; /* Ajustement de la position horizontale */
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 15px 35px; /* Ajustement du padding pour une meilleure proportion */
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 1rem; /* Taille de police légèrement augmentée */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre pour plus de profondeur */
+    z-index: 1; /* Assure que le badge est au-dessus du contenu */
+}
+
+.tarif-pro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(89, 178, 244, 0.5);
+}
+
+.tarif-pro h2 {
+    color: var(--main-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.tarif-pro .price {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.voir-plus-btn, .voir-moins-btn {
+    background: transparent;
+    border: 1px solid var(--main-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.voir-plus-btn:hover, .voir-moins-btn:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+
+.tarif-pro .more-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    text-align: left;
+}
+
+.tarif-pro .more-details.active {
+    max-height: 500px; /* Ajustez cette valeur selon vos besoins */
+    transition: max-height 0.5s ease-in;
+}
+
+.more-details[style*="block"] {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+.more-details p span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.more-details p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+
+/* tarifs mobile */
+
+.tarif-mobile {
+    max-height: 680px;
+}
+
+.tarif-mobile:hover {
+    transform: translateY(-10px);
+}
+
+.tarif-mobile h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Devis Personnaliser */
+
+/* Section Devis */
+.devis {
+    background-color: var(--bg-color);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.devis .title h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.devis-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--snd-bf-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.devis-form label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.devis-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.devis-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.devis-form button[type="submit"]:hover {
+    background-color: var(--main-color);
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background: var(--snd-bf-color);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links li {
+    list-style-type: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+
+.footer-text {
+    margin: 10px 20px;
+
+}

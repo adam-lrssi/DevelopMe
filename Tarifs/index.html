@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Tarifs/css/style.css">
+    <link rel="icon" href="/assets/image/faviconDM-removebg-preview.png" type="image/x-icon">
+    <title>Tarifs</title>   
+    <script src="/Tarifs/js/script.js" defer></script>
+</head>
+<body>
+    <section class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/assets/image/DevelopMe-logo.png" alt="">
+            </div>
+            <div class="nav-links">
+                <li><a href="/index.html#home">Accueil</a></li>
+                <li><a href="/index.html#about">A propos</a></li>
+                <li><a href="/Tarifs/index.html#tarifs">Tarifs</a></li>
+                <li><a href="/Tarifs/index.html#devis">Devis</a></li>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="tarifs" id="tarifs">
+        <div class="tarifs-container">
+            <h1>Les tarifs de <span>Develop</span>Me.</h1>
+            <div class="tarifs-grid">
+                <!---Pack Essentiel----->
+                <div class="tarif">
+                    <h2>Pack Essentiel</h2>
+                    <p class="price">350€</p>
+                    <div class="option">
+                        <div class="optiontext">
+                            <p><span>Compatibilité : </span> ordinateur et  mobile</p>
+                            <p><span>Design personnalisées :</span> Thème sur mesure, adapté à votre activité.</p>
+                            <p><span>Pages incluses :</span> <br>1 page + 3 pages supplémentaires</p>
+                            <p><span>Formulaire de contact :</span> <br>Intégration d'un formulaire simple pour faciliter la prise de contact.</p>
+                        </div>
+                    </div>
+                    <button class="commander tarif-essentiel"><a href="#">Commander</a></button>
+                </div>
+                <!-----Pack Pro----->
+                <div class="tarif-pro">
+                    <h2>Pack Pro</h2>
+                    <p class="price">550€</p>
+                    <div class="option">
+                        <div class="optiontext">
+                            <p><span>Compatibilité : </span> ordinateur et  mobile</p>
+                            <p><span>Design personnalisées :</span> Thème sur mesure, adapté à votre activité.</p>
+                            <p><span>Pages incluses :</span> <br>1 page + 5 pages supplémentaires</p>
+                            <p><span>Formulaire de contact :</span> <br>Intégration d'un formulaire simple pour faciliter la prise de contact.</p>
+                        </div>
+                        <button class="voir-plus-btn voir-plus-pro">Voir Plus</button>
+                        <div class="more-details" style="display: none;">
+                            <p><span>Intégration des réseux sociaux :</span><br>Ajoutez vos résaux pour plus de visibilité.</p>
+                            <p><span>Support Prioritaire :</span><br>Bénéficiez d'un support prioritaire pour les questions ou une modification urgente.</p>
+                        </div>
+                        <button class="voir-moins-btn" style="display: none;">Voir Moins</button>
+                    </div>
+                    <button class="commander"><a href="#">Commander</a></button>
+                </div>
+                <!-----Pack only mobile----->
+                <div class="tarif-mobile">
+                    <h2>Pack Mobile</h2>
+                    <p class="price">200€</p>
+                    <div class="option">
+                        <div class="optiontext">
+                            <p>Site web compatible uniquement sur mobile.</p>
+                            <p><span>Design personnalisées :</span> Thème sur mesure, adapté à votre activité.</p>
+                            <p><span>Pages incluses :</span> <br>1 page + 2 pages supplémentaires.</p>
+                            <p><span>Formulaire de contact :</span> <br>Intégration d'un formulaire simple pour faciliter la prise de contact.</p>
+                            <p><span>Version Mobile :</span><br>Design responsive pour un affichage optimal sur smartphone et tablette.</p>
+                        </div>
+                    </div>
+                    <button class="commander"><a href="#">Commander</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="devis" id="devis">
+        <div class="title">
+            <h2>Obtenez un devis personnalisé</h2>
+        </div>
+        <div class="devis-form">
+            <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="5b4f5da6-5c6f-4352-a5ed-a152a2c8e2c0">
+                <label for="nom">Nom : </label>
+                <input type="text" id="nom" name="name" required>
+                <br>
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="telephone">Téléphone : </label>
+                <input type="tel" id="telephone" name="Phone Number" required>
+                <br>
+                <label for="message">Message : </label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <button type="submit">Envoyer</button>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                <div class="h-captcha" data-captcha="true"></div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            </form>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#">Tarifs</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by DevelopMe. | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
